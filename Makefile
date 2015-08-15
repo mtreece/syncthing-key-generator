@@ -11,7 +11,7 @@ NUM_YEARS_VALID ?= 100
 
 # shouldn't be changed
 X509_CONFIG_NAME = syncthing.cfg
-X509_CSR_NAME = syncthing.csr
+X509_CSR_NAME = tmp_syncthing.csr
 
 # universal constants
 NUM_DAYS_IN_YEAR = 365
