@@ -8,6 +8,7 @@
 FINAL_KEYFILE_NAME ?= key.pem
 FINAL_CERT_NAME ?= cert.pem
 NUM_YEARS_VALID ?= 100
+CERT ?= $(FINAL_CERT_NAME)
 
 # shouldn't be changed
 X509_CONFIG_NAME = syncthing.cfg
@@ -36,3 +37,8 @@ $(FINAL_CERT_NAME): $(X509_CONFIG_NAME) $(X509_CSR_NAME) $(FINAL_KEYFILE_NAME)
 	    -sha256 \
 	    -extensions v3_req \
 	    -extfile $(X509_CONFIG_NAME)
+
+# How Device IDs are computed: http://docs.syncthing.net/dev/device-ids.html
+.PHONY: show-id
+show-id: $(CERT)
+	@openssl x509 -in $(CERT) -outform der | openssl dgst -binary -sha256 | ./b32.pl
