@@ -43,8 +43,8 @@ $(FINAL_CERT_NAME): $(X509_CONFIG_NAME) $(X509_CSR_NAME) $(FINAL_KEYFILE_NAME)
 show-id: $(CERT)
 	@# the --quiet is needed to keep the recursive make output from feeding
 	@# into the encoded-id.py script
-	@$(MAKE) --quiet show-raw-id CERT=$(CERT) | ./encoded-id.py
+	@$(MAKE) --quiet show-raw-id CERT=$(CERT) | ./tools/encoded-id.py
 
 .PHONY: show-raw-id
 show-raw-id: $(CERT)
-	@openssl x509 -in $(CERT) -outform der | openssl dgst -binary -sha256 | ./b32.pl
+	@openssl x509 -in $(CERT) -outform der | openssl dgst -binary -sha256 | ./tools/b32.pl
