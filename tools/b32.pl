@@ -4,6 +4,8 @@
 # from: http://serverfault.com/a/386205
 # notes:
 #   Really, Linux, no native base32 converter...?
+#   dependencies:
+#     $ sudo apt-get install libmime-base32-perl
 
 use MIME::Base32 qw( RFC );
 

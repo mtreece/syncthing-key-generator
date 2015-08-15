@@ -7,6 +7,8 @@
 #   see:
 #     http://docs.syncthing.net/dev/device-ids.html
 #     https://forum.syncthing.net/t/v0-9-0-new-node-id-format/478
+#   dependencies:
+#     $ sudo apt-get install python-stdnum
 
 import os
 import sys
