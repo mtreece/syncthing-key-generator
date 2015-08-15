@@ -1,4 +1,4 @@
-# Makefile - Makefile for generating Android SyncThing keys
+# Makefile - Makefile for generating SyncThing keys
 # author: mtreece
 # date: 2015-08-15
 # purpose:
