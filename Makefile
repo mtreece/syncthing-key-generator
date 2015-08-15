@@ -41,4 +41,10 @@ $(FINAL_CERT_NAME): $(X509_CONFIG_NAME) $(X509_CSR_NAME) $(FINAL_KEYFILE_NAME)
 # How Device IDs are computed: http://docs.syncthing.net/dev/device-ids.html
 .PHONY: show-id
 show-id: $(CERT)
+	@# the --quiet is needed to keep the recursive make output from feeding
+	@# into the encoded-id.py script
+	@$(MAKE) --quiet show-raw-id CERT=$(CERT) | ./encoded-id.py
+
+.PHONY: show-raw-id
+show-raw-id: $(CERT)
 	@openssl x509 -in $(CERT) -outform der | openssl dgst -binary -sha256 | ./b32.pl
