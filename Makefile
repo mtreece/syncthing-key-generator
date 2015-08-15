@@ -22,6 +22,7 @@ $(FINAL_KEYFILE_NAME): $(X509_CONFIG_NAME)
 $(X509_CSR_NAME): $(X509_CONFIG_NAME)
 	openssl req \
 	    -new \
+	    $$([ -f $(FINAL_KEYFILE_NAME) ] && echo -key $(FINAL_KEYFILE_NAME)) \
 	    -config $(X509_CONFIG_NAME) \
 	    -out $(X509_CSR_NAME)
 
