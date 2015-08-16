@@ -48,6 +48,7 @@ but the RNG on your Android device may not provide enough entropy for a
 cryptographically-secure setup.
 
 To generate off-device keys, one can:
+
 1. Launch the application the first time, allowing the app to generate its own keys.
 2. Export the configuration
 3. Generate the new keys using this repo, off-device
