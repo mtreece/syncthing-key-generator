@@ -1,4 +1,4 @@
-# Makefile - Makefile for generating SyncThing keys
+# Makefile - Makefile for generating Syncthing keys
 # author: mtreece
 # date: 2015-08-15
 # purpose:
