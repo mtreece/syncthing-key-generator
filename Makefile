@@ -11,7 +11,7 @@ NUM_YEARS_VALID ?= 100
 CERT ?= $(FINAL_CERT_NAME)
 
 # shouldn't be changed
-X509_CONFIG_NAME = syncthing.cfg
+X509_CONFIG_NAME = conf/syncthing.cfg
 X509_CSR_NAME = tmp_syncthing.csr
 
 # universal constants
