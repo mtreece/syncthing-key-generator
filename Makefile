@@ -17,6 +17,7 @@ X509_CSR_NAME = tmp_syncthing.csr
 # universal constants
 NUM_DAYS_IN_YEAR = 365
 
+.PHONY: all
 all: $(FINAL_KEYFILE_NAME) $(FINAL_CERT_NAME)
 
 $(FINAL_KEYFILE_NAME): $(X509_CONFIG_NAME)
