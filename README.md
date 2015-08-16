@@ -63,7 +63,7 @@ None. Simply clone and perform all operations in-repo.
 
 ## Tests
 
-No guarantees, and currently not-tested.
+No guarantees, but has been moderately tested.
 
 ## Contributors
 
