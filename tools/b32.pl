@@ -7,11 +7,11 @@
 #   dependencies:
 #     $ sudo apt-get install libmime-base32-perl
 
-use MIME::Base32 qw( RFC );
+use MIME::Base32;
 
 undef $/;  # in case stdin has newlines
 $string = <STDIN>;
 
-$encoded = MIME::Base32::encode($string);
+$encoded = encode_base32($string);
 
 print "$encoded\n";
